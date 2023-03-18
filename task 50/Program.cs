@@ -21,7 +21,7 @@ void FillArray(int[,] array)
     }
 }
 
-void PrintMatrix(int[,] matr,int rows, int colums)
+void PrintMatrix(int[,] matr,int rows, int columns)
 {
     for (int i = 0; i < matr.GetLength(0); i++)
     {
@@ -35,10 +35,10 @@ void PrintMatrix(int[,] matr,int rows, int colums)
 }
 
 int rows = ReadInt("Введите индекс строки: ");
-int colums = ReadInt("Введите индекс столбца: ");
+int columns = ReadInt("Введите индекс столбца: ");
 int[,] numbers = new int[6, 6];
 FillArray(numbers);
- PrintMatrix(numbers,rows,colums);
+ PrintMatrix(numbers,rows,columns);
  System.Console.WriteLine();
-if (rows < numbers.GetLength(0) && colums < numbers.GetLength(1)) Console.WriteLine($"элемент массива = {numbers[rows, colums]}");
-else Console.WriteLine($"[{rows},{colums}] -> такого элемента в массиве нет");
+if (rows < numbers.GetLength(0) && columns < numbers.GetLength(1)) Console.WriteLine($"элемент массива = {numbers[rows, columns]}");
+else Console.WriteLine($"[{rows},{columns}] -> такого элемента в массиве нет");
